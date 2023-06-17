@@ -56,7 +56,6 @@ namespace RegularExpression
         public static IEnumerable<string> Method6(string input)
         {
             var phonesMatches = _phoneRegex.Matches(input);
-            
             return phonesMatches.Select(el => el.Value.StartsWith("38")?  "+" + el.Value : el.Value).ToArray();
         }
     }
